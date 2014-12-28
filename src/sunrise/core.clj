@@ -155,10 +155,10 @@
             (hours->hours-and-minutes lt)))))
 
 (defn rising-time
-  [m]
   "Calculates the time for sunrise (e.g., 7:12)
    given a map that contains :day, :month, :year,
    :latitude, :longitude, and :local-offset"
+  [m]
   (event-time m :rising))
 
 (defn setting-time
