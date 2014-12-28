@@ -41,12 +41,12 @@
   (testing "rising time calculation"
     (is (= (rising-time carrboro-jan) "7:27"))
     (is (= (rising-time sydney-jan) "4:47"))
-    (is (= (rising-time mcmurdo) "continuous light"))
+    (is (= (rising-time mcmurdo-jan) "continuous light"))
     (is (= (rising-time norilsk-jan) "continuous dark"))))
 
 (deftest test-setting-time
   (testing "setting time calculation"
     (is (= (setting-time carrboro-jan) "17:13"))
     (is (= (setting-time sydney-jan) "19:09"))
-    (is (= (setting-time mcmurdo) "continuous light"))
+    (is (= (setting-time mcmurdo-jan) "continuous light"))
     (is (= (setting-time norilsk-jan) "continuous dark"))))
