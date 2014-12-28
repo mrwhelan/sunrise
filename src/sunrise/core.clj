@@ -167,32 +167,3 @@
    :latitude, :longitude, and :local-offset"
   [m]
   (event-time m :setting))
-
-;; REMOVE ME
-(def carrboro  {:day 1
-          :month 1
-          :year 2015
-          :latitude 35.9206
-          :longitude -79.0839
-          :local-offset -5}) ; rising 7:27, setting 17:13
-
-(def sydney {:day 1
-             :month 1
-             :year 2015
-             :latitude -33.86
-             :longitude 151.2094
-             :local-offset 10}) ; rising 4:47, setting 19:09
-
-(def mcmurdo {:day 1
-              :month 1
-              :year 2015
-              :latitude -77.85
-              :longitude 166.6667
-              :local-offset 13}) ; -> "continuous-light"
-
-(def norilsk {:day 1
-              :month 1
-              :year 2015
-              :latitude 69.3333
-              :longitude 88.2167
-              :local-offset 7}) ; -> "continuous-dark"
