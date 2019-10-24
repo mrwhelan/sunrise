@@ -6,7 +6,7 @@ given a location, date, and local offset from UTC.
 ## Usage Examples
 
 ```clojure
-(use 'sunrise.core))
+(use 'sunrise.core)
 
 ;; Sunset in Paris
 (setting-time {:day 1
