@@ -125,11 +125,11 @@
 
 (defn- hours->hours-and-minutes
   [hours]
-  (let [[h m] (string/split (str hours) #"\.")]
-    (str h ":"
-         (format
-          "%02d"
-         (Math/round (* 60 (float (read-string (str "0." m)))))))))
+  (let [h (Math/floor hours)
+        m (Math/round (* 60 (- hours h)))]
+    (if (= m 60)
+      (str (long (mod (+ h 1) 24)) ":00")
+      (str (long h) ":" (format "%02d" m)))))
 
 (defn- event-time
   [m rising-or-setting]

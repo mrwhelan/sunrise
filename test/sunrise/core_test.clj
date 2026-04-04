@@ -50,3 +50,11 @@
     (is (= (setting-time sydney-jan) "19:09"))
     (is (= (setting-time mcmurdo-jan) "continuous light"))
     (is (= (setting-time norilsk-jan) "continuous dark"))))
+
+(deftest test-minute-rollover
+  (testing "minute rollover: result should not display '60' as minutes"
+    (is (= "6:00"
+           (rising-time {:latitude 1.0 :longitude -0.875
+                         :year 2021 :month 4 :day 14
+                         :local-offset 0})))))
+
